@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "dev"
+  cluster:
+    server: "https://rancher.inchtek.tech/k8s/clusters/c-m-ct9t67x9"
+
+users:
+- name: "dev"
+  user:
+    token: "kubeconfig-u-yomz4zhzi5vgzn7:p8f8cnn7d9bhnjj5lbk8x6vtrsnqm2bhgz56v9prxlklxkws89npxs"
+
+
+contexts:
+- name: "dev"
+  context:
+    user: "dev"
+    cluster: "dev"
+
+current-context: "dev"

@@ -1,0 +1,25 @@
+emqx:
+  username: "inchtek"
+  password: "VC6bZaJXyhb"
+  #qa3
+  server_port: 31883
+  server_address: "10.100.64.225"
+  api_username: "b70ee49583f63070"
+  api_password: "XerogOqcQUwd39AS8V43TWk4Sxs9C8oWHihW3t5YL03xF"
+  api_url: "https://emqx.qa2.inchtek.tech/api/v5/mqtt/topic_metrics"
+
+kafka:
+  #qa3
+  servers: "10.100.64.106:9094,10.100.64.107:9094,10.100.64.109:9094"
+  group_id:  "qa3-inchtek_driver_status_group"
+  partition: 0
+  topic: "qa3-inchtek_driver_status"
+  #qa4
+
+kafka2:
+  #qa3
+  servers: "10.100.64.106:9094"
+  group_id:  "benthos_group_qa3_idps"
+  partition: 0
+  topic: "qa3-inchtek_driver_status_detail"
+  #qa4

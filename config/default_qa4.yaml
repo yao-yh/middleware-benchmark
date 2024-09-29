@@ -1,0 +1,32 @@
+emqx:
+  username: "inchtek"
+  password: "VC6bZaJXyhb"
+  #qa4
+  server_port: 31884
+  server_address: "10.100.64.214"
+  api_username: "e4bf2f2b0806872e"
+  api_password: "oVy0MiL4UlAX9CRSRMdCBlOrFQ8TIuWB2RHOdBHhJG5P"
+  api_url: "http://10.100.64.214:31084/api/v5/mqtt/topic_metrics"
+
+kafka:
+  #qa4
+  servers: "10.100.64.94:9094,10.100.64.95:9094,10.100.64.96:9094"
+  group_id:  "qa4-dev-inchtek_driver_status_group"
+  partition: 0
+  topic: "qa4-dev-inchtek_driver_status"
+
+kafka2:
+  #qa4
+  servers: "10.100.64.94:9094,10.100.64.95:9094,10.100.64.96:9094"
+  group_id:  "logstash"
+  partition: 0
+  topic: "qa4-dev-inchtek_driver_status_detail"
+
+elasticsearch:
+  #qa4
+  servers: "elasticsearch.qa4.inchtek.tech"
+  index: "logs_es-*"
+  protocol: "https"
+  username: "elastic"
+  password: "elastic"
+

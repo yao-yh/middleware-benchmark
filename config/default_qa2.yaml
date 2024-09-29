@@ -1,0 +1,33 @@
+k8s:
+  enable: false
+
+emqx:
+  client_type: "emqx"
+  username: "dev1_server"
+  password: "dev1_server"
+  server_port: 1883
+  server_address: "10.100.64.43"
+  api_key: "e4d0b7e0cc100496"
+  api_secret: "kuSwqdW6Nu9CsRGCByzXfkDWw6cOGspS9Bqxuy8CkHDXJ"
+  api_url: "http://10.100.64.43:18083/api/v5/metrics?aggregate=true"
+
+kafka:
+  client_type: "kafka"
+  #qa3
+  servers: "10.100.64.44:9092"
+  group_id:  "qa2-inchtek_driver_status_group"
+  partition: 0
+#  topic: "test-full_network_parsing-vsoc"
+#  topic: "dev-vsoc-inchtek_driver_status_test"
+  topic: "dev-vsoc-inchtek_driver_status_detail_test"
+#  topic: "dev-vsoc-vehicle-and-device-complete"
+  #qa4
+
+kafka2:
+  client_type: "kafka"
+  #qa3
+  servers: "10.100.64.44:9092"
+  group_id:  "qa2-inchtek_driver_status_group"
+  partition: 0
+  topic: "test-full_network_parsing_output-vsoc"
+  #qa4
