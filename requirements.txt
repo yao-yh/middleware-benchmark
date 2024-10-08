@@ -1,2 +1,5 @@
 openpyxl
 kubernetes
+confluent-kafka
+requests
+paho-mqtt
