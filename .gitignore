@@ -22,12 +22,18 @@ monitor.log*
 nohup.out
 
 ################################
+# zip
+################################
+*.zip
+
+################################
 # temp folders
 ################################
 tmp/
 temp/
 ftp/
 output/
+venv/
 .svn/
 .svn/all-wcprops
 .svn/entries

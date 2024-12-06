@@ -43,8 +43,8 @@ def init_result():
         headers.append(f'{key} 消息个数停止更新时间')
         if key == 'mqtt':
             continue
-        headers.append(f'{key} 消息丢失(%)')
-        headers.append(f'{key} 最大时延(ms)')
+        # headers.append(f'{key} 消息丢失(%)')
+        # headers.append(f'{key} 最大时延(ms)')
         headers.append(f'{key} 平均时延（仅供参考）(ms)')
 
     for key in class_map.keys():

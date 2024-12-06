@@ -3,13 +3,14 @@ k8s:
 
 emqx:
   client_type: "emqx"
-  username: "dev1_server"
-  password: "dev1_server"
+  username: "inchtek"
+  password: "VC6bZaJXyhb"
   server_port: 1883
-  server_address: "10.100.64.43"
-  api_key: "e4d0b7e0cc100496"
-  api_secret: "kuSwqdW6Nu9CsRGCByzXfkDWw6cOGspS9Bqxuy8CkHDXJ"
-  api_url: "http://10.100.64.43:18083/api/v5/metrics?aggregate=true"
+#  server_address: "emqx-test.seazonmotor.com"
+  server_address: "10.100.64.74"
+  api_key: "2d8de93560965eaa"
+  api_secret: "oVi9AQROeCpjK5rjBAxjqDkKqOpmh9B6DrESZEj3FruRD"
+  api_url: "http://10.100.64.74:18083/api/v5/metrics?aggregate=true"
 
 kafka:
   client_type: "kafka"
@@ -18,9 +19,11 @@ kafka:
   group_id:  "qa2-inchtek_driver_status_group"
   partition: 0
 #  topic: "test-full_network_parsing-vsoc"
-#  topic: "dev-vsoc-inchtek_driver_status_test"
-  topic: "dev-vsoc-inchtek_driver_status_detail_test"
+#  topic: "test-full_network_parsing1-vsoc"
+  topic: "dev-inchtek_driver_status"
+#  topic: "dev-vsoc-inchtek_driver_status_detail_test"
 #  topic: "dev-vsoc-vehicle-and-device-complete"
+  offset: "earliest"
   #qa4
 
 kafka2:

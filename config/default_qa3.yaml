@@ -2,18 +2,21 @@ emqx:
   username: "inchtek"
   password: "VC6bZaJXyhb"
   #qa3
-  server_port: 31883
-  server_address: "10.100.64.225"
+  server_port: 1883
+  server_address: "10.100.64.74"
   api_username: "b70ee49583f63070"
   api_password: "XerogOqcQUwd39AS8V43TWk4Sxs9C8oWHihW3t5YL03xF"
   api_url: "https://emqx.qa2.inchtek.tech/api/v5/mqtt/topic_metrics"
 
 kafka:
   #qa3
-  servers: "10.100.64.106:9094,10.100.64.107:9094,10.100.64.109:9094"
-  group_id:  "qa3-inchtek_driver_status_group"
-  partition: 0
-  topic: "qa3-inchtek_driver_status"
+  client_type: "kafka"
+  servers: "10.100.64.75:9092"
+  group_id:  "qa2-inchtek_driver_status_group"
+  offset:  "earliest"
+  partition: 7
+#  topic: "test-full_network_parsing-vsoc"
+  topic: "dev-vsoc-"
   #qa4
 
 kafka2:
@@ -22,4 +25,5 @@ kafka2:
   group_id:  "benthos_group_qa3_idps"
   partition: 0
   topic: "qa3-inchtek_driver_status_detail"
+  offset:  "earliest"
   #qa4

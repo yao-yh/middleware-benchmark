@@ -1,13 +1,12 @@
 import time
 
-# from case.config import SECOND_WAIT
 from config import *
 import threading
 import logging
 logger = logging.getLogger('base')
 from src.common.global_data import g
 
-
+SECOND_WAIT = 5000
 class Base(threading.Thread):
     """
     父类
@@ -27,7 +26,6 @@ class Base(threading.Thread):
         super().__init__()
         self.callback = callback
         self.config = g.config[self.type]
-
         self.client_start_count = 0
         self.client_end_count = 0
         self.client_start_time = 0
@@ -52,7 +50,7 @@ class Base(threading.Thread):
     def get_test_time(self):
         return self.client_start_time, self.client_end_time
 
-    def get_current_count(self, timer):
+    def get_current_count(self, sleep_timer):
         """
         获取当前中间件的消息个数。
 
@@ -76,8 +74,9 @@ class Base(threading.Thread):
                 if current_count and current_count != current_count_bak:
                     current_count_bak = current_count
                     time_start = time_now
-                if time_now >= time_start + timer:
+                if time_now >= time_start + sleep_timer:
                     self._after_get_current_count()
+
                     return current_count, time_start
                 time.sleep(0.3)
             except Exception as e:
